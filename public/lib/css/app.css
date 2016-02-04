@@ -1,0 +1,47 @@
+.container {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ), url(img/background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.myname {
+  color: white;
+}
+
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.button {
+  /*position: absolute;*/
+  top: 50%;
+}
+
+
+.ghost-button-semi-transparent {
+  display: inline-block;
+  width: 100px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+.ghost-button-semi-transparent:hover,
+.ghost-button-semi-transparent:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
