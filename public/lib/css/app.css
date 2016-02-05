@@ -1,28 +1,105 @@
-.container {
-  background: linear-gradient(
+body {
+  /*background: linear-gradient(
       rgba(0, 0, 0, 0.6), 
       rgba(0, 0, 0, 0.6)
-    ), url(img/background.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
+    ), url(../img/background.png) no-repeat center center fixed;*/
+/*  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover;*/
+  background-color: #000;
+  /*background-image:
+        -moz-radial-gradient(circle, #FFFFFF 2px, rgba(248,255,128,.5) 4px, transparent 20px),
+        -moz-radial-gradient(circle, #FFFFFF 1px, rgba(255,186,170,.4) 3px, transparent 30px),
+        -moz-radial-gradient(ellipse, rgba(255,255,255,.9) 1px, rgba(251,255,186,.3) 2px, transparent 40px),
+        -moz-radial-gradient(ellipse, rgba(255,255,255,.4), rgba(253,255,219,.2) 1px, transparent 30px);*/
+     /* Webkit */
+     /*background-image:
+        -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 30, from(white), color-stop(0.1, rgba(248,255,128,.5)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 20, from(white), color-stop(0.1, rgba(255,186,170,.4)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 30, from(rgba(255,255,255,.9)), color-stop(0.05, rgba(251,255,186,.3)), to(transparent)),
+        -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 20, from(rgba(255,255,255,.4)), color-stop(0.03, rgba(253,255,219,.2)), to(transparent));*/
+     /* Background Attributes */
+/*     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;*/
+     /* Animation */
+/*     animation-name: movement;
+     animation-duration: 5s;
+     animation-timing-function: linear;
+     animation-iteration-count: infinite;*/
+     /* Firefox */
+/*     -moz-animation-name: movement;
+     -moz-animation-duration: 5s;
+     -moz-animation-timing-function: linear;
+     -moz-animation-iteration-count: infinite;*/
+     /* Webkit */
+  /*   -webkit-animation-name: movement;
+     -webkit-animation-duration: 5s;
+     -webkit-animation-timing-function: linear;
+     -webkit-animation-iteration-count: infinite;*/
 }
+/*@keyframes movement
+{
+   from {
+    background-position: 0 -550px, 60px -320px ,270px -120px, 150px -150px;
+        
+   }
+   to {
+    background-position: 0 0,  60px 30px, 270px 130px, 150px 70px;
+   }
+}
+@-moz-keyframes movement
+{
+   from {
+         background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+   }
+   to {
+         background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+   }
+}
+@-webkit-keyframes movement
+{
+   from {
+         background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+   }
+   to {
+         background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+   }
+}*/
 
 .myname {
   color: white;
 }
 
 .wrapper {
-  position: relative;
-  text-align: center;
-}
-
-.button {
-  /*position: absolute;*/
+  height: 600px;
+  width: 1000px;
+  position: absolute;
+  z-index: 4;
+  margin: -300px 0 0 -500px;
+  left: 50%;
   top: 50%;
 }
 
+.inner {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  text-align: center;
+  /*Centering Method 2*/
+  margin: -200px 0 0 -200px;
+  left: 50%;
+  top: 50%;
+}
+
+p {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 400;
+  line-height: 20px;
+}
 
 .ghost-button-semi-transparent {
   display: inline-block;
@@ -30,6 +107,7 @@
   padding: 8px;
   color: #fff;
   border: 2px solid #fff;
+   border-radius: 100;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -45,3 +123,79 @@
   transition: background-color 0.3s ease-in,
               border-color 0.3s ease-in;
 }
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-1000px 500px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(../img/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(../img/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(../img/clouds.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+
+
